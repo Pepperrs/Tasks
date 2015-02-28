@@ -1,0 +1,26 @@
+<p>
+  <strong>Task:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Descriptrion:</strong>
+  <%= @article.text %>
+</p>
+<p>
+  <strong>Priority:</strong>
+  <%= @article.priority %>
+</p>
+<p>
+  <strong>Starttime:</strong>
+  <%= @article.startingtime %>
+</p>
+<p>
+  <strong>Deadline:</strong>
+  <%= @article.deadline %>
+</p>
+<%= link_to 'Back', articles_path %> |
+<%= link_to 'Edit', edit_article_path(@article) %>      
+<%= link_to 'Destroy', article_path(@article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
