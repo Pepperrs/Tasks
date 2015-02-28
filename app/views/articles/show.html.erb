@@ -13,14 +13,14 @@
 </p>
 <p>
   <strong>Starttime:</strong>
-  <%= @article.startingtime %>
+  <%= @article.startingtime.to_s(:long) %>
 </p>
 <p>
   <strong>Deadline:</strong>
-  <%= @article.deadline %>
+  <%= @article.deadline.to_s(:long) %>
 </p>
 <%= link_to 'Back', articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %>      
+<%= link_to 'Edit', edit_article_path(@article) %> |     
 <%= link_to 'Destroy', article_path(@article),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>

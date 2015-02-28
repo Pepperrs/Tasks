@@ -31,9 +31,15 @@
   </p>
 
   <p>
-    <%= f.label :Starttime %><br>
-    <%= f.datetime_field :startingtime %>
+    <%= f.label :startingtime %><br>
+    <%= f.date_select(:startingtime, :start_year => 2015) %>
   </p>
+
+  <p>
+    <%= f.label :deadline %><br>
+    <%= f.date_select(:deadline, :start_year => 2015) %>
+  </p>
+ 
  
   <p>
     <%= f.submit %>
